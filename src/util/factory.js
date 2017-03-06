@@ -21,5 +21,5 @@ export function registerComponent(type, level) {
 }
 
 export function getComponent(type) {
-    return pool[type];
+    return typeof type === 'function' ? type : pool[type];
 }
